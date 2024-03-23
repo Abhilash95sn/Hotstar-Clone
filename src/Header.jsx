@@ -22,26 +22,29 @@ const Header = () => {
             Icon: AiOutlineSearch
         },
         {
-            name: 'STAR',
+            name: 'ORIGINALS',
             Icon: AiOutlineStar
         },
         {
-            name: 'PLAYCIRCLE',
+            name: 'MOVIES',
             Icon: AiFillPlayCircle
         },
         {
-            name: 'OUTLINE+',
+            name: 'WATCHLIST',
             Icon: AiOutlinePlus
         },
     ]
     return (
         <>
             <div className='w-full'>
-                <div className='90%'>
-                    <img src={logo} className='w-[80px] md:w-[115px]   object-cover' />
-                    {menu.map((item) => (
-                        <HeaderItem name={item.name} Icon={item.Icon} />
-                    ))}
+                <div className=' w-[90%] mx-auto flex '>
+                    <div className='w-[50%]'><img src={logo} className='w-[40%] md:w-[115px]   object-cover' /></div>
+                    <div className='w-[70%] flex p-[10px] justify-between mx-5 hover:'>
+                        {menu.map((item) => (
+                            <HeaderItem name={item.name} Icon={item.Icon} />
+                        ))}
+                    </div>
+
                 </div>
             </div>
         </>
